@@ -1,5 +1,5 @@
 import json
-
+from rules import rules
 # Here I will be adding users 
 # now I have to add numbers and email -> valid ones
 def add_user()-> dict:
@@ -25,3 +25,39 @@ def add_user()-> dict:
             "id": id_num,
             "amount": -50}
         
+
+# Now my plan is to prompt for their pin and user name or passcode 
+
+def username_pin(data: dict) -> dict:
+    print()
+    print("Lets create Pin for account to be secured")
+    print("Remember your pin please!!!!!!!!!")
+    while True:
+        user_rules = input("First click (rules) to show rules I recommend or Click enter if want to continue: ").lower().strip()
+        if user_rules == "":
+            break
+        elif user_rules == "rules":
+            print()
+            rules()
+    while True:
+        print()
+        try:
+            user_pin = input("Create Your pin: ")
+            if len(user_pin) < 4 or len(user_pin) > 4:
+                print("Your pin should be 4 digits ONLY!!!!!!!! ")
+                continue
+            if user_pin.count(user_pin[0]) > 2 or user_pin.count(user_pin[1]) > 2:
+                print(f"You repeated a digit more than twice which is not allowed !!!!!")
+                continue
+
+
+        except ValueError:
+            print("Your pin should be digits only pay attention please!!!!")
+            continue
+        else:
+            print("--------------------IMPORTANT--------------------------")
+            print("Remember username is your ID")
+            data["pin"] = user_pin
+            return data
+# my_info = add_user()
+# print(username_pin(my_info))

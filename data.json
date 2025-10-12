@@ -1,16 +1,30 @@
 {
-    "users_details": [
-        {
-            "name": "Njabulo",
-            "surname": "Moshifa",
-            "id": "0610305533064",
-            "amount": 5000
-        },
-        {
-            "name": "Noluthando",
-            "surname": "Nkosi",
-            "id": 9634345644634,
-            "amount": -50
-        }
-    ]
+  "users_details": [
+    {
+      "name": "Njabulo",
+      "surname": "Moshifa",
+      "id": "0610305533064",
+      "amount": 5000
+    },
+    {
+      "name": "Noluthando",
+      "surname": "Nkosi",
+      "id": 9634345644634,
+      "amount": -50
+    },
+    {
+      "name": "Rooned",
+      "surname": "Waybne",
+      "id": 1234567891013,
+      "amount": -50,
+      "pin": "1234"
+    },
+    {
+      "name": "Dsa",
+      "surname": "Nda",
+      "id": 2344324242324,
+      "amount": -50,
+      "pin": "3245"
+    }
+  ]
 }
