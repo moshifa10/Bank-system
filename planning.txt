@@ -1,0 +1,21 @@
+
+
+I am thinking of making a json file that stores users info 
+    info - user's details including
+    money - current money, money users owes
+    id - so that I track them by their ids
+
+functions or imports:
+    add user - adding (new) user to the system
+    deleting - delete available user
+    edit details/ update details - updating details
+    forgot password - User will be allowed to change passwords
+
+
+current user:
+    view balance - user can view thier balance
+    transfer money - transferring to existing  users
+    pay  - user will be able to pay for products in any shop
+
+testing:
+    testing functions
