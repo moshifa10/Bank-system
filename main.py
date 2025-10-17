@@ -1,6 +1,7 @@
 from add_to_json import add_to_json
 from add_user import add_user , username_pin
 import os
+from login import find_user
 
 
 def main():
@@ -21,6 +22,11 @@ def main():
                 user_info = add_user()
                 user_pin = username_pin(user_info)
                 add_to_json(user_pin)
+                break
+            elif user == 2:
+                user_account = find_user()
+                os.system('cls' or 'clear')
+                print(f"Your name: {user_account["name"]}\nYour amount: {user_account["amount"]} ")
                 break
 
         except ValueError:
