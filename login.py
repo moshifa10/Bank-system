@@ -18,7 +18,8 @@ def find_user():
             for i in data["users_details"]:
                 if i["id"] == id and i["pin"] == pin:
                     return i
-            
+                else:
+                    count -= 1
         except ValueError:
             print("Please your options should a number!!!!!!")
             count -= 1
@@ -27,6 +28,8 @@ def find_user():
             print("Please Make sure that Pin and ID are correct")
             count -= 1
             continue
+    if count == 0:
+        return None
         
 
 # print(find_user())

@@ -26,7 +26,9 @@ def main():
             elif user == 2:
                 user_account = find_user()
                 os.system('cls' or 'clear')
-                print(f"Your name: {user_account["name"]}\nYour amount: {user_account["amount"]} ")
+                if user_account != None:
+                    print(f"Your name: {user_account["name"]}\nYour amount: {user_account["amount"]} ")
+                
                 break
 
         except ValueError:
