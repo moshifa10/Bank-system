@@ -9,7 +9,7 @@ def main():
     
     print("-------------- Welcome to Majozi's Bank System --------------")
     print()
-    print("We have options to choose from")
+    print("You have options to choose from")
     print()
     while True:
         try:

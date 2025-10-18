@@ -21,7 +21,7 @@ def find_user():
                 else:
                     count -= 1
         except ValueError:
-            print("Please your options should a number!!!!!!")
+            print("Please your options should be a number!!!!!!")
             count -= 1
             continue
         except KeyError:
