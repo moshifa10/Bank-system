@@ -19,3 +19,9 @@ current user:
 
 testing:
     testing functions
+
+
+
+
+
+Whenever a user buys they should specify for what and save those items for history 

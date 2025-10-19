@@ -2,10 +2,11 @@ from add_to_json import add_to_json
 from add_user import add_user , username_pin
 import os
 from login import find_user, loggedIn
-
+from pay import payment_money
 
 def main():
     options = ["Create account", "Login", "Edit account", "Delete account"]
+    logged_in_options = ["Pay", "Send"] 
     
     print("-------------- Welcome to Majozi's Bank System --------------")
     print()
@@ -27,14 +28,19 @@ def main():
                 user_account = find_user()
                 # os.system('cls' or 'clear')
                 if user_account != None:
-                    user_logged = loggedIn(user_account)
-                    print(f"Available balance {user_account["amount"]}")
-                    
+                    loggedIn(user_account)
+                    while True:
+                        try:
+                            print("Just select any option from 1-4")
+                            for i in range(len(logged_in_options)):
+                                print(f"{i+1} {logged_in_options[i]}")
 
-
-                
-                break
-
+                            user_option = int(input("Your option: "))
+                            if user_option == 1:
+                                payment_money(user_account)
+                                break
+                        except ValueError:
+                            break
         except ValueError:
             print("Please provide a digit and 1-4")
 
