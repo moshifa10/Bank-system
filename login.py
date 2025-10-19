@@ -1,6 +1,8 @@
 import json
 import os
-
+import time
+from plyer import notification
+import sys
 # User login
 
 def find_user():
@@ -30,6 +32,26 @@ def find_user():
             continue
     if count == 0:
         return None
+
+def loggedIn(data: dict):
+    print("Loading", end="")
+    start_time = time.time()
+    while time.time() - start_time < 5:
+        print(".", end="")
+        sys.stdout.flush()
+        time.sleep(0.5)
+    print(f"\n{data['name']} Logged In  🚀 🚀")
+    while True:
+        notification.notify(
+            title = "ALERT!!!!",
+            message = f"{data["name"]} Logged In.",
+            timeout = 10
+        )
+        time.sleep(3) 
+        break
+    
+
+
         
 
 # print(find_user())

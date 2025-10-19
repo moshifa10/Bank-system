@@ -1,7 +1,7 @@
 from add_to_json import add_to_json
 from add_user import add_user , username_pin
 import os
-from login import find_user
+from login import find_user, loggedIn
 
 
 def main():
@@ -25,9 +25,13 @@ def main():
                 break
             elif user == 2:
                 user_account = find_user()
-                os.system('cls' or 'clear')
+                # os.system('cls' or 'clear')
                 if user_account != None:
-                    print(f"Your name: {user_account["name"]}\nYour amount: {user_account["amount"]} ")
+                    user_logged = loggedIn(user_account)
+                    print(f"Available balance {user_account["amount"]}")
+                    
+
+
                 
                 break
 
