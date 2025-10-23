@@ -31,7 +31,7 @@ def main():
                     loggedIn(user_account)
                     while True:
                         try:
-                            print("Just select any option from 1-4")
+                            print("Just select any option from 1-2")
                             for i in range(len(logged_in_options)):
                                 print(f"{i+1} {logged_in_options[i]}")
 
@@ -40,6 +40,7 @@ def main():
                                 payment_money(user_account)
                                 break
                         except ValueError:
+                            os.system("cls" or "clear")
                             break
         except ValueError:
             print("Please provide a digit and 1-4")

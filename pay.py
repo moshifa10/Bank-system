@@ -34,5 +34,5 @@ def payment_money(data):
             continue
         else:
             paid = pay(amount, data)
-            print(paid)
+            break
 
